@@ -14,7 +14,7 @@ export const routes: Routes = [{path:'About',component:About},{
   path:'',component:Home
 },
 {
-  path:'profile',component:Profile
+  path:'profile',component:Profile,data:{name:'mohan'}
 },
 {
   path:'**' ,component:PageNotFound
