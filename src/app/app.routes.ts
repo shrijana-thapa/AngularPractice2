@@ -4,6 +4,7 @@ import { About } from './about/about';
 import { Contact } from './contact/contact';
 import { Home } from './home/home';
 import { PageNotFound } from './page-not-found/page-not-found';
+import { Profile } from './profile/profile';
 
 export const routes: Routes = [{path:'About',component:About},{
   path:'Login',component:Login}
@@ -11,6 +12,9 @@ export const routes: Routes = [{path:'About',component:About},{
 },
 {
   path:'',component:Home
+},
+{
+  path:'profile',component:Profile
 },
 {
   path:'**' ,component:PageNotFound
