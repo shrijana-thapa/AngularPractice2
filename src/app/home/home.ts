@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink,Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,5 +8,13 @@ import { RouterLink } from '@angular/router';
   styleUrl: './home.css'
 })
 export class Home {
+
+ 
+  constructor(private router:Router){}
+
+  sendData(){
+  const gege = this.router.navigate(['profile'], {queryParams:{name:'anu'}})
+  
+  }
 
 }
