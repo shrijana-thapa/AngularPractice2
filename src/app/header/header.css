@@ -1,0 +1,16 @@
+.navbar{
+  display:flex;
+  justify-content: space-around;
+}
+.navul{
+  display:flex;
+  width:300px;
+  justify-content: space-between;
+  list-style: none;
+}
+.navul li a{
+  text-decoration: none;
+}
+.Active{
+  background-color: red;
+}
