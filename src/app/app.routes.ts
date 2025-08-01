@@ -5,6 +5,7 @@ import { Contact } from './contact/contact';
 import { Home } from './home/home';
 import { PageNotFound } from './page-not-found/page-not-found';
 import { Profile } from './profile/profile';
+import { Admin } from './admin/admin';
 
 export const routes: Routes = [{path:'About',component:About},{
   path:'Login',component:Login}
@@ -16,6 +17,7 @@ export const routes: Routes = [{path:'About',component:About},{
 {
   path:'profile',component:Profile,data:{name:'mohan'}
 },
+{path:'admin',loadComponent:()=> import ("./admin/admin").then ((c)=>c.Admin)},
 {
   path:'**' ,component:PageNotFound
 }];
