@@ -8,12 +8,15 @@ import { Profile } from './profile/profile';
 import { Admin } from './admin/admin';
 import { Personal } from './personal/personal';
 import { AuthGuard } from './auth-guard';
+import { Details } from './details/details'; // FIX: Uncomment and correct the path if the file exists
+ import { DeactiveGuard } from './deactivate-guard';
+
 
 export const routes: Routes = [{path:'About',component:About}
   ,{path:'Contact',component:Contact
 },
 {
-  path:'',component:Home
+  path:'home',component:Home
 },
 {
   path:'profile',component:Profile,data:{name:'mohan'}
@@ -24,6 +27,10 @@ export const routes: Routes = [{path:'About',component:About}
 },
 {
   path:'personal',component:Personal,canActivate:[AuthGuard]
+},
+{
+  path:'details',component:Details,canDeactivate:[DeactiveGuard]
+
 },
 {
   path:'**' ,component:PageNotFound

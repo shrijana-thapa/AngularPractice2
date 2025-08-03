@@ -1,0 +1,7 @@
+
+<form [formGroup]="userDetailsForm" (ngSubmit)="submit()">
+  <input type="text" class="form-control" formControlName="username" placeholder="enter your name" (change)="checkStatus()">
+ <input type="text" class="form-control" formControlName="registration_no" placeholder="enter registration num  "   (change)="checkStatus()">
+ <button class="btn btn-primary">Login</button>
+</form>
+<button [routerLink] ="['/home']">click here to go to home page</button>
