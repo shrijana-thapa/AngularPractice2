@@ -4,4 +4,9 @@
 
 
 <router-outlet></router-outlet>
-<app-user user="rita"></app-user>
+<app-user [user1]="selectedUser.value"></app-user>
+<select #selectedUser (change)="changeValue(selectedUser.value)">
+<option value="anil">Anil</option>
+<option value="sita">Sita</option>
+<option value="Ram">Ram</option>
+</select>

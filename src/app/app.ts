@@ -11,5 +11,9 @@ import { User } from './user/user';
   styleUrl: './app.css'
 })
 export class App {
+  user1:string='';
   protected readonly title = signal('Routing');
+  changeValue(name:string){
+    this.user1=name;
+  }
 }
